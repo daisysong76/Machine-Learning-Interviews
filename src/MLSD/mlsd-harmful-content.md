@@ -59,10 +59,9 @@
   * Users 
     * user_id, age, gender, location, contact
   * Items(Posts) 
-    * post_id, author_id, text context, images, videos, links, timestamp
+    * post_id, author_id, text context, images, videos, links, timestamp,On-device
   * User-post interactions 
     * user_id, post_id, interaction_type, value, timestamp
-
 
 ### 5. Feature Engineering
 Features: 
