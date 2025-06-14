@@ -35,8 +35,8 @@
 * Multimodal input (text, image, video, etc): 
   * Multimodal fusion techniques 
     * Early Fusion: modalities combined first, then make a single prediction
-      *pro: unnecessary to collect training data separately, capture this benign in the unified feature vector
-      *cons: learning more difficult due to the complex relationships between modalities. need more training data
+      * pro: unnecessary to collect training data separately, capture this benign in the unified feature vector
+      * cons: learning more difficult due to the complex relationships between modalities. need more training data
     * Late Fusion: process modalities independently, fuse predictions 
       * cons: separate training data for modalities, comb of individually safe content might be harmful
     #### with around 500 million posts being published every day, the model has enough data to learn the task.
@@ -46,11 +46,12 @@
   * One binary classifier per harm category (p(violence), p(nude), p(hate))
     * multiple models, trained and maintained separately, expensive 
   * Single multi-label classifier 
-    * complicated task to learn 
+    * complicated task to learn (predicting the probabilities of each harmful class using a shared model isn’t ideal, the input features may need to be transformed differently.)
   * Multi-task classifier: learn multi tasks simultanously 
     * single shared layers (learns similarities between tasks) -> transformed features 
-    * task specific layers: classification heads 
+    * task specific layers: classification heads (optimal for predicting a specific harm probability.)
     * pros: single model, shared layers prevent redundancy, train data for each task can be used for others as well (limited data)
+![image](https://github.com/user-attachments/assets/d7625f04-7b63-4a0f-a612-fd8e599227d4)
 
 ### 4. Data Collection and Preparation
 
