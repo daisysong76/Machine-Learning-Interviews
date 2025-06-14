@@ -38,7 +38,43 @@
 * Online metrics 
   * CTR 
   * Time spent on images 
-
+1. MRR (Mean Reciprocal Rank)
+Use: Measures how high the first relevant item is ranked.
+Pros: Simple and quick to compute.
+Cons: Ignores all other relevant items; poor for assessing full ranking quality.
+Trade-off: Good for tasks where only the first relevant item matters (e.g., QA); not suitable for ranking tasks with multiple relevant items.
+2. Recall@k
+Use: Measures how many of the relevant items appear in the top k predictions.
+Pros: Captures coverage of relevant items.
+Cons: Biased in datasets with many relevant items; doesn’t care about where in the top-k the items appear.
+Trade-off: May underrepresent model performance in domains with high cardinality (e.g., image-to-image retrieval).
+3. Precision@k
+Use: Proportion of relevant items in the top k predictions.
+Pros: Easy to understand; good for evaluating top-k quality.
+Cons: Ignores ordering within the top k; insensitive to the position of items.
+Trade-off: Useful for strict precision targets; lacks depth for ranking-sensitive applications.
+4. mAP (Mean Average Precision)
+Use: Averages precision across all relevant items in a list.
+Pros: Better captures ranking quality across the whole list.
+Cons: Assumes binary relevance (relevant or not); not suitable for graded relevance.
+Trade-off: Robust for tasks with binary labels; less ideal for tasks with graded similarity (like image scores 0–5).
+5. nDCG (Normalized Discounted Cumulative Gain)
+Use: Measures ranking quality considering both relevance and position.
+Pros: Handles graded relevance well; best offline metric for evaluating ranking fidelity.
+Cons: Requires ideal relevance labels (which can be hard to define).
+Trade-off: Most accurate but computationally heavier; ideal for tasks with ordinal or continuous relevance (e.g., image similarity 0–5).
+🌐 Online Metrics
+These are collected via real user interactions on the live platform.
+1. CTR (Click-Through Rate)
+Use: Measures how often users click on items shown.
+Pros: Direct signal of user interest; easy to measure.
+Cons: Can be influenced by item position, thumbnail attractiveness, etc.
+Trade-off: Simple but may not reflect deep engagement or relevance.
+2. Time Spent on Images
+Use: Measures how long users view/interact with an image.
+Pros: Captures depth of engagement.
+Cons: Noisy signal (e.g., user distracted); doesn’t always imply satisfaction.
+Trade-off: Complements CTR well; useful for detecting "attractive but unhelpful" content.
 ### 3. Architectural Components  
 * High level architecture 
   * Representation learning: 
