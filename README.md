@@ -23,6 +23,8 @@ The following components are the most commonly used interview modules for techni
 | Chapter 4 	| [ML System Design (Updated in 2023)](src/MLSD/ml-system-design.md)|
 | Chapter 5 	| [*Agentic AI Systems (2025)*](https://github.com/alirezadir/Agentic-AI-Systems.git)|
 | Chapter 6 	| [Behavioral](src/behavior.md)| 
+https://bytebytego.com/courses/machine-learning-system-design-interview/visual-search-system
+
 |  	|  	|  
 
 </center>
