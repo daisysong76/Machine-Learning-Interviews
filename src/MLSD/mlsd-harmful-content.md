@@ -34,9 +34,12 @@
 ### 3. Architectural Components  
 * Multimodal input (text, image, video, etc): 
   * Multimodal fusion techniques 
-    * Early Fusion: modalities combined first, then make a single prediction 
-    * Late Fusion: process modalities independently, fuse predictions
-      * cons: separate training data for modalities, comb of individually safe content might be harmful 
+    * Early Fusion: modalities combined first, then make a single prediction
+      *pro: unnecessary to collect training data separately, capture this benign in the unified feature vector
+      *cons: learning more difficult due to the complex relationships between modalities. need more training data
+    * Late Fusion: process modalities independently, fuse predictions 
+      * cons: separate training data for modalities, comb of individually safe content might be harmful
+    #### with around 500 million posts being published every day, the model has enough data to learn the task.
 * Multi-Label/Multi-Task classification 
   * Single binary classifier (P(harmful))
     * easy, not explainable 
