@@ -24,6 +24,13 @@ The following components are the most commonly used interview modules for techni
 | Chapter 5 	| [*Agentic AI Systems (2025)*](https://github.com/alirezadir/Agentic-AI-Systems.git)|
 | Chapter 6 	| [Behavioral](src/behavior.md)| 
 https://bytebytego.com/courses/machine-learning-system-design-interview/visual-search-system
+https://bytebytego.com/courses/machine-learning-system-design-interview/google-street-view-blurring-system
+https://bytebytego.com/courses/machine-learning-system-design-interview/youtube-video-search
+https://bytebytego.com/courses/machine-learning-system-design-interview/harmful-content-detection
+https://bytebytego.com/courses/machine-learning-system-design-interview/video-recommendation-system
+https://bytebytego.com/courses/machine-learning-system-design-interview/event-recommendation-system
+https://bytebytego.com/courses/machine-learning-system-design-interview/similar-listings-on-vacation-rental-platforms
+https://bytebytego.com/courses/machine-learning-system-design-interview/personalized-news-feed
 
 |  	|  	|  
 
